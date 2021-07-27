@@ -28,6 +28,7 @@ function StackPages() {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home2" component={Authors} />
     </Stack.Navigator>
   )
 }
