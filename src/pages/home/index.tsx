@@ -32,6 +32,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <Header>
           <OpenDrawerButton
             onPress={() => navigation.openDrawer()}
+            
           >
             <Icon 
               name="bars"
@@ -45,6 +46,8 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <Main>
           <MainButton
             activeOpacity={0.7}
+            onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'AIDS'})}
+
           >
             <MainButtonImage source={Aids} resizeMode='contain'/>
             <MainButtonText>
@@ -54,7 +57,6 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("Home2")}
           >
             <MainButtonImage source={Trico} resizeMode='contain'/>
             <MainButtonText>

@@ -15,6 +15,7 @@ import { Home } from './src/pages/home';
 import { Contact } from './src/pages/Contact';
 import { Rate } from './src/pages/Rate';
 import { Authors } from './src/pages/Authors';
+import { ContentPage } from './src/pages/ContentPage';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -28,7 +29,7 @@ function StackPages() {
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Home2" component={Authors} />
+      <Stack.Screen name="ContentPage" component={ContentPage} />
     </Stack.Navigator>
   )
 }
