@@ -30,7 +30,9 @@ interface ContentPageProps extends DrawerContentComponentProps {
     }
   }
 }
-export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => {
+
+
+export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
 
@@ -76,6 +78,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => 
             <Line/>
             <Button
               activeOpacity={0.7}
+              onPress={() => navigation.navigate("Concept", { type: 1, title: 'AIDS' })}
             >
               <ButtonTitle>
                 Conceito
@@ -87,6 +90,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => 
             <Line/>
             <Button
               activeOpacity={0.7}
+              onPress={() => navigation.navigate("Manifestation", { type: 1, title: 'AIDS' })}
             >
               <ButtonTitle>
                 Manifestações Clínicas
@@ -98,6 +102,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => 
             <Line/>
             <Button
               activeOpacity={0.7}
+              onPress={() => navigation.navigate("Transmitting", { type: 1, title: 'AIDS' })}
             >
               <ButtonTitle>
                 Formas de transmissão
@@ -109,6 +114,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => 
             <Line/>
             <Button
               activeOpacity={0.7}
+              onPress={() => navigation.navigate("Treatment", { type: 1, title: 'AIDS' })}
             >
               <ButtonTitle>
                 Tratamento e prognóstico
@@ -120,6 +126,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route}) => 
             <Line/>
             <Button
               activeOpacity={0.7}
+              onPress={() => navigation.navigate("Prevention", { type: 1, title: 'AIDS' })}
             >
               <ButtonTitle>
                 Formas de Prevenção

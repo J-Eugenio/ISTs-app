@@ -39,7 +39,7 @@ export const TitleContainer = styled.View`
   left: -10px;
   background: white;
   height: 50px;
-  width: 80px;
+  width: 120px;
   justify-content: center;
   align-items: center;
 

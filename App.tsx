@@ -16,6 +16,11 @@ import { Contact } from './src/pages/Contact';
 import { Rate } from './src/pages/Rate';
 import { Authors } from './src/pages/Authors';
 import { ContentPage } from './src/pages/ContentPage';
+import { Concept } from './src/pages/content/concept';
+import { Manifestation } from './src/pages/content/manifestation';
+import { Transmitting } from './src/pages/content/transmitting';
+import { Prevention } from './src/pages/content/prevention';
+import { Treatment } from './src/pages/content/treatment';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -30,6 +35,11 @@ function StackPages() {
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="ContentPage" component={ContentPage} />
+      <Stack.Screen name="Concept" component={Concept} />
+      <Stack.Screen name="Manifestation" component={Manifestation} />
+      <Stack.Screen name="Transmitting" component={Transmitting} />
+      <Stack.Screen name="Treatment" component={Treatment} />
+      <Stack.Screen name="Prevention" component={Prevention} />
     </Stack.Navigator>
   )
 }
