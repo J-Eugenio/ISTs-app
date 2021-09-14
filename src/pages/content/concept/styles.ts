@@ -91,4 +91,8 @@ export const ContentImage = styled.Image`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 
-export const ContentImageDescription = styled.Text``;
+export const ContentImageDescription = styled.Text`
+  font-size: 10px;
+  text-align: justify;
+  font-style: italic;
+`;

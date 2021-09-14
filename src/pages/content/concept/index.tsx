@@ -17,7 +17,7 @@ import {
   ContentImage,
   ContentImageDescription
 } from './styles';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -89,7 +89,7 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
           resizeMode='contain'
         />
         <ContentImageDescription>
-          ''
+          {content?.img_description[0]}
         </ContentImageDescription>
       </Main>
     </Container>

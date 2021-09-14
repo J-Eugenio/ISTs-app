@@ -38,13 +38,21 @@ interface IContentProps {
 export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
-  const [content,  setContent] = useState<IContentProps>();
+  const [concept,  setConcept] = useState<IContentProps>();
+  const [clinicalManifestation, setClinicalManifestation] = useState<IContentProps>();
+  const [prevention, setPrevention] = useState<IContentProps>();
+  const [transmissionForm, setTransmissionForm] = useState<IContentProps>();
+  const [treatmentAndPrognosis, setTreatmentAndPrognosis] = useState<IContentProps>()
 
   const content_filtered = Content.find(item => item.type === type);
   useEffect(() => {
     setTitle(route.params.title);
     setType(route.params.type);
-    setContent(content_filtered?.concept)
+    setConcept(content_filtered?.concept);
+    setClinicalManifestation(content_filtered?.clinical_manifestations);
+    setTransmissionForm(content_filtered?.transmission_forms);
+    setTreatmentAndPrognosis(content_filtered?.treatment_and_prognosis)
+    setPrevention(content_filtered?.forms_of_prevention)
   }, [content_filtered])
   
   return (
@@ -84,7 +92,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Concept", { type , title: 'AIDS', content })}
+              onPress={() => navigation.navigate("Concept", { type , title , content: concept })}
             >
               <ButtonTitle>
                 Conceito
@@ -96,7 +104,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Manifestation", { type: 1, title: 'AIDS' })}
+              onPress={() => navigation.navigate("Manifestation", { type, title , content: clinicalManifestation})}
             >
               <ButtonTitle>
                 Manifestações Clínicas
@@ -108,7 +116,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Transmitting", { type: 1, title: 'AIDS' })}
+              onPress={() => navigation.navigate("Transmitting", { type, title, content: transmissionForm })}
             >
               <ButtonTitle>
                 Formas de transmissão
@@ -120,7 +128,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Treatment", { type: 1, title: 'AIDS' })}
+              onPress={() => navigation.navigate("Treatment", { type , title, content: treatmentAndPrognosis })}
             >
               <ButtonTitle>
                 Tratamento e prognóstico
@@ -132,7 +140,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Prevention", { type: 1, title: 'AIDS' })}
+              onPress={() => navigation.navigate("Prevention", { type, title, content: prevention })}
             >
               <ButtonTitle>
                 Formas de Prevenção

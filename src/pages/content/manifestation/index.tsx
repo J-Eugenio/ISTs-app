@@ -20,18 +20,26 @@ interface ContentPageProps extends DrawerContentComponentProps {
   route:{
     params:{
       type: number,
-      title: string
+      title: string,
+      content: IContentProps,
     }
   }
+}
+
+interface IContentProps {
+  text: string;
+  img_description: Array<String>;
 }
 
 export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
+  const [content,  setContent] = useState<IContentProps>();
 
   useEffect(() => {
     setTitle(route.params.title);
     setType(route.params.type);
+    setContent(route.params.content);
   }, [])
 
   return (
@@ -69,11 +77,7 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
         </ConceptNameContainer>
 
         <Content>
-          A síndrome da imunodeficiência adquirida, 
-          ou Aids (da sigla em inglês), é uma doença 
-          causada pelo HIV, que ataca o sistema 
-          himunológico e deixa o orgasmo vulnerável 
-          a doenças.
+          {content?.text}
         </Content>
       </Main>
     </Container>
