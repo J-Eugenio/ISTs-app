@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import { TouchableOpacity } from 'react-native';
-
-import { DrawerContentComponentProps } from '@react-navigation/drawer'
+import { DrawerContentComponentProps } from '@react-navigation/drawer';
+import { Content } from '../../utils/content';
 
 import { 
   Container,
@@ -19,8 +19,7 @@ import {
   Button,
   ButtonTitle,
 } from './styles';
-import { useEffect } from 'react';
-import { useState } from 'react';
+
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -31,15 +30,22 @@ interface ContentPageProps extends DrawerContentComponentProps {
   }
 }
 
+interface IContentProps {
+  text: string;
+  img_description: Array<String>;
+}
 
 export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
+  const [content,  setContent] = useState<IContentProps>();
 
+  const content_filtered = Content.find(item => item.type === type);
   useEffect(() => {
     setTitle(route.params.title);
     setType(route.params.type);
-  }, [])
+    setContent(content_filtered?.concept)
+  }, [content_filtered])
   
   return (
     <Container>
@@ -78,7 +84,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
             <Line/>
             <Button
               activeOpacity={0.7}
-              onPress={() => navigation.navigate("Concept", { type: 1, title: 'AIDS' })}
+              onPress={() => navigation.navigate("Concept", { type , title: 'AIDS', content })}
             >
               <ButtonTitle>
                 Conceito

@@ -56,7 +56,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'Tricomoníase'})}
+            onPress={() => navigation.navigate("ContentPage",{ type: 2, title: 'Tricomoníase'})}
           >
             <MainButtonImage source={Trico} resizeMode='contain'/>
             <MainButtonText>
@@ -66,7 +66,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'Sífilis'})}
+            onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Sífilis'})}
           >
             <MainButtonImage source={Sifi} resizeMode='contain'/>
             <MainButtonText>
@@ -76,7 +76,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'Herpes'})}
+            onPress={() => navigation.navigate("ContentPage",{ type: 4, title: 'Herpes'})}
           >
             <MainButtonImage source={Her} resizeMode='contain'/>
             <MainButtonText>

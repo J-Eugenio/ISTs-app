@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import EstruturaHiv from '../../../assets/content/hiv/estrutura_hiv.png';
 
 import { 
   Container,
@@ -13,26 +14,37 @@ import {
   Content,
   TitleConceptContainer,
   ConceptNameContainer,
+  ContentImage,
+  ContentImageDescription
 } from './styles';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
     params:{
       type: number,
-      title: string
+      title: string,
+      content: IContentProps,
     }
   }
+}
+
+interface IContentProps {
+  text: string;
+  img_description: Array<String>;
 }
 
 export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
+  const [content,  setContent] = useState<IContentProps>();
 
   useEffect(() => {
     setTitle(route.params.title);
     setType(route.params.type);
-  }, [])
+    setContent(route.params.content);
+    
+  }, [content])
 
   return (
     <Container>
@@ -69,12 +81,16 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
         </ConceptNameContainer>
 
         <Content>
-          A síndrome da imunodeficiência adquirida, 
-          ou Aids (da sigla em inglês), é uma doença 
-          causada pelo HIV, que ataca o sistema 
-          himunológico e deixa o orgasmo vulnerável 
-          a doenças.
+          {content?.text}
         </Content>
+
+        <ContentImage 
+          source={EstruturaHiv}
+          resizeMode='contain'
+        />
+        <ContentImageDescription>
+          ''
+        </ContentImageDescription>
       </Main>
     </Container>
   )
