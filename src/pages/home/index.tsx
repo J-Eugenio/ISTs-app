@@ -12,6 +12,7 @@ import Trico from '../../assets/dst-images-button/trico.png';
 
 import { DrawerContentComponentProps } from '@react-navigation/drawer'
 import { StackHeaderProps } from '@react-navigation/stack'
+import * as Sharing from 'expo-sharing';
 
 import { 
   Container,
@@ -46,7 +47,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <Main>
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'AIDS'})}
+            onPress={() => Sharing.shareAsync}
           >
             <MainButtonImage source={Aids} resizeMode='contain'/>
             <MainButtonText>
