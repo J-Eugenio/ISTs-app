@@ -29,10 +29,10 @@ export const Title = styled.Text`
 
 export const Main = styled.View`
   display: flex;
+  flex: 1;
   align-items: center;
-
   margin-top: 15%;
-  height: 59%;
+  
 `;
 
 export const TitleConcept = styled.Text`
@@ -74,4 +74,22 @@ export const ConceptNameContainer = styled.View`
   border-radius: 10px;
 
   margin-bottom: 30px;
+`;
+
+export const ContentImage = styled.Image`
+  display: flex;
+  flex: 1;
+  margin-top: 20px;;
+  width: 100%;
+  border-radius: 8px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+`;
+
+export const ContentImageDescription = styled.Text`
+  margin-top: 5px;
+  font-size: 10px;
+  text-align: justify;
+  font-style: italic;
+  
 `;

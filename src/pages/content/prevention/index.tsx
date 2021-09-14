@@ -13,8 +13,11 @@ import {
   Content,
   TitleConceptContainer,
   ConceptNameContainer,
+  ContentImage,
+  ContentImageDescription
 } from './styles';
 import { TouchableOpacity } from 'react-native';
+import MandalaHiv from '../../../assets/content/hiv/mandala.jpg';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -79,6 +82,15 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
         <Content>
           {content?.text}
         </Content>
+
+        <ContentImage 
+          source={MandalaHiv}
+          resizeMode='contain'
+        />
+        <ContentImageDescription>
+          {content?.img_description[0]}
+        </ContentImageDescription>
+
       </Main>
     </Container>
   )
