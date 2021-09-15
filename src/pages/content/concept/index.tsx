@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import EstruturaHiv from '../../../assets/content/hiv/estrutura_hiv.png';
+import conceitoSifilis from '../../../assets/content/sifilis/conceito.png';
 
 import { 
   Container,
@@ -84,13 +85,32 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
           {content?.text}
         </Content>
 
-        <ContentImage 
-          source={EstruturaHiv}
-          resizeMode='contain'
-        />
-        <ContentImageDescription>
-          {content?.img_description[0]}
-        </ContentImageDescription>
+        {
+          type === 1 &&
+          <>
+            <ContentImage 
+              source={EstruturaHiv}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </> 
+        }
+
+        {
+          type === 2 &&
+          <>
+            <ContentImage 
+              source={conceitoSifilis}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </> 
+        }
+        
       </Main>
     </Container>
   )

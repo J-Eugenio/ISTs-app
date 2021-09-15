@@ -60,7 +60,7 @@ export const TitleConceptContainer = styled.View`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 export const ConceptNameContainer = styled.View`
@@ -72,17 +72,12 @@ export const ConceptNameContainer = styled.View`
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-
-  margin-bottom: 30px;
 `;
 
 export const ContentImage = styled.Image`
   display: flex;
-  flex: 1;
-  margin-top: 20px;;
-  width: 100%;
-  border-radius: 8px;
-
+  max-width: 190px;
+  height: 190px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 

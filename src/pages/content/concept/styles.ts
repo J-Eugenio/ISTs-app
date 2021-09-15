@@ -84,8 +84,9 @@ export const ConceptNameContainer = styled.View`
 export const ContentImage = styled.Image`
   display: flex;
   flex: 1;
-  margin-top: 20px;;
-  width: 100%;
+  margin-top: 20px;
+  max-width: 80%;
+  background-color: #FFF;
   border-radius: 8px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);

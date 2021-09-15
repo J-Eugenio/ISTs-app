@@ -35,11 +35,16 @@ interface IContentProps {
   img_description: Array<String>;
 }
 
+interface IClinicalProps {
+  text: Array<string>;
+  img_description: Array<String>;
+}
+
 export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [concept,  setConcept] = useState<IContentProps>();
-  const [clinicalManifestation, setClinicalManifestation] = useState<IContentProps>();
+  const [clinicalManifestation, setClinicalManifestation] = useState<IClinicalProps>();
   const [prevention, setPrevention] = useState<IContentProps>();
   const [transmissionForm, setTransmissionForm] = useState<IContentProps>();
   const [treatmentAndPrognosis, setTreatmentAndPrognosis] = useState<IContentProps>()

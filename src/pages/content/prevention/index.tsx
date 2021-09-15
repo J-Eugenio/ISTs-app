@@ -86,6 +86,7 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
         <ContentImage 
           source={MandalaHiv}
           resizeMode='contain'
+          borderRadius={10}
         />
         <ContentImageDescription>
           {content?.img_description[0]}

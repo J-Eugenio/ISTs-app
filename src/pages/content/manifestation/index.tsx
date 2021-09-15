@@ -13,8 +13,14 @@ import {
   Content,
   TitleConceptContainer,
   ConceptNameContainer,
+  ContentImage,
+  ContentImageDescription
 } from './styles';
 import { TouchableOpacity } from 'react-native';
+
+import primariaSifilis from '../../../assets/content/sifilis/primaria.png';
+import secundariaSifilis from '../../../assets/content/sifilis/secundaria.png';
+import terciariaSifilis from '../../../assets/content/sifilis/terciaria.png';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -27,7 +33,7 @@ interface ContentPageProps extends DrawerContentComponentProps {
 }
 
 interface IContentProps {
-  text: string;
+  text: Array<string>;
   img_description: Array<String>;
 }
 
@@ -67,7 +73,10 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
         </TouchableOpacity>
       </Header>
 
-      <Main>
+      <Main
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', alignItems: 'center' }}
+      >
         <TitleConceptContainer>
           <TitleConcept>{title}</TitleConcept>
         </TitleConceptContainer>
@@ -76,9 +85,54 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
           <ConceptName>Manifestação Clínicas</ConceptName>
         </ConceptNameContainer>
 
-        <Content>
-          {content?.text}
-        </Content>
+        
+          {
+            type === 2 ?
+            <>
+              <Content>
+              {content?.text[0]}
+              </Content>
+
+              <ContentImage 
+                source={primariaSifilis}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[0]}
+              </ContentImageDescription>
+              <Content>
+                {content?.text[1]}
+              </Content>
+              {/*--------------------------------*/}
+              <ContentImage 
+                source={secundariaSifilis}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[1]}
+              </ContentImageDescription>
+              <Content>
+                {content?.text[2]}
+              </Content>
+              {/*--------------------------------*/}
+              <ContentImage 
+                source={terciariaSifilis}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[2]}
+              </ContentImageDescription>
+              <Content>
+                {content?.text[3]}
+              </Content>
+            </>
+            : 
+            <Content>
+              {content?.text}
+            </Content>
+          }
+        
+
       </Main>
     </Container>
   )
