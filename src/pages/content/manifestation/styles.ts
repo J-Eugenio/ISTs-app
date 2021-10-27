@@ -4,7 +4,7 @@ export const Container = styled.View`
   display: flex;
   height: 100%;
   padding: 15px 20px;
-  background: #5EB098;
+  background: #1E88E5;
 `;
 
 export const Header = styled.View`
@@ -47,6 +47,7 @@ export const ConceptName = styled.Text`
 
 export const Content = styled.Text`
   color: #FFF;
+  text-align: justify;
 `;
 
 export const TitleConceptContainer = styled.View`
@@ -77,11 +78,13 @@ export const ConceptNameContainer = styled.View`
 
 export const ContentImage = styled.Image`
   display: flex;
-  height: 250px;
-  width: 100%;
-
-  border-radius: 10px;
+  flex: 1;
+  margin-top: 20px;
+  max-width: 80%;
+  max-height: 250px;
   background-color: #FFF;
+  border-radius: 8px;
+  
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 `;
 
@@ -89,4 +92,13 @@ export const ContentImageDescription = styled.Text`
   font-size: 10px;
   text-align: justify;
   font-style: italic;
+  margin-top: 3px;
 `;
+
+export const Column = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+

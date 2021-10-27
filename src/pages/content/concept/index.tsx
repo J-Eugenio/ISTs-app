@@ -4,6 +4,14 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import EstruturaHiv from '../../../assets/content/hiv/estrutura_hiv.png';
 import conceitoSifilis from '../../../assets/content/sifilis/conceito.png';
 
+//Herpes
+import Figure8 from '../../../assets/content/herpes/Figure8.png';
+import Figure9 from '../../../assets/content/herpes/Figure9.png';
+
+//Trico
+import Figure15 from '../../../assets/content/trico/Figure15.png';
+
+
 import { 
   Container,
   Header,
@@ -16,7 +24,8 @@ import {
   TitleConceptContainer,
   ConceptNameContainer,
   ContentImage,
-  ContentImageDescription
+  ContentImageDescription,
+  Column
 } from './styles';
 import { TouchableOpacity } from 'react-native';
 
@@ -73,21 +82,23 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
       </Header>
 
       <Main>
-        <TitleConceptContainer>
-          <TitleConcept>{title}</TitleConcept>
-        </TitleConceptContainer>
+        <Column>
+          <TitleConceptContainer>
+            <TitleConcept>{title}</TitleConcept>
+          </TitleConceptContainer>
 
-        <ConceptNameContainer>
-          <ConceptName>Conceito</ConceptName>
-        </ConceptNameContainer>
+          <ConceptNameContainer>
+            <ConceptName>Conceito</ConceptName>
+          </ConceptNameContainer>
 
-        <Content>
-          {content?.text}
-        </Content>
+          <Content>
+            {content?.text}
+          </Content>
+        </Column>
 
         {
           type === 1 &&
-          <>
+          <Column>
             <ContentImage 
               source={EstruturaHiv}
               resizeMode='contain'
@@ -95,12 +106,12 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>
-          </> 
+          </Column> 
         }
 
         {
           type === 2 &&
-          <>
+          <Column>
             <ContentImage 
               source={conceitoSifilis}
               resizeMode='contain'
@@ -108,9 +119,42 @@ export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>
-          </> 
+          </Column> 
         }
         
+        {
+          type === 3 &&
+          <Column>
+            <ContentImage 
+              source={Figure8}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+
+            <ContentImage 
+              source={Figure9}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[1]}
+            </ContentImageDescription>
+          </Column>
+        }
+
+        {
+          type === 4 &&
+          <Column>
+            <ContentImage 
+              source={Figure15}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </Column>
+        }
       </Main>
     </Container>
   )

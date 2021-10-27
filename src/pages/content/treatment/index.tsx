@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+import Figure14 from '../../../assets/content/herpes/Figure14.png';
+import Figure18 from '../../../assets/content/trico/Figure18.png';
+
 import { 
   Container,
   Header,
@@ -13,6 +16,9 @@ import {
   Content,
   TitleConceptContainer,
   ConceptNameContainer,
+  Column,
+  ContentImage,
+  ContentImageDescription
 } from './styles';
 import { TouchableOpacity } from 'react-native';
 
@@ -69,17 +75,73 @@ export const Treatment:React.FC<ContentPageProps> = ({ navigation, route }) => {
       </Header>
 
       <Main>
-        <TitleConceptContainer>
-          <TitleConcept>{title}</TitleConcept>
-        </TitleConceptContainer>
+        <Column>
+          <TitleConceptContainer>
+            <TitleConcept>{title}</TitleConcept>
+          </TitleConceptContainer>
 
-        <ConceptNameContainer>
-          <ConceptName>Tratamento e prognóstico</ConceptName>
-        </ConceptNameContainer>
+          <ConceptNameContainer>
+            <ConceptName>Tratamento e prognóstico</ConceptName>
+          </ConceptNameContainer>
+        </Column>
+        
+        {
+          type === 1 &&
+          <Column>
+            <Content>
+              {content?.text}
+            </Content>
+          </Column>
+        }
 
-        <Content>
-          {content?.text}
-        </Content>
+        { 
+          type === 2 &&
+          <Column>
+            <Content>
+              {content?.text}
+            </Content>
+          </Column>
+        }
+
+        { 
+          type === 3 &&
+          <Column>
+            <Content>
+              {content?.text[0]}
+            </Content>
+
+            <ContentImage 
+              source={Figure14}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+
+            <Content>
+              {content?.text[1]}
+            </Content>
+          </Column>
+        }
+
+        { 
+          type === 4 &&
+          <Column>
+            <Content>
+              {content?.text}
+            </Content>
+
+            <ContentImage 
+              source={Figure18}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+
+          </Column>
+        }
+        
       </Main>
     </Container>
   )

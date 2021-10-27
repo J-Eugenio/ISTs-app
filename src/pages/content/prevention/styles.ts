@@ -4,7 +4,7 @@ export const Container = styled.View`
   display: flex;
   height: 100%;
   padding: 15px 20px;
-  background: #5EB098;
+  background: #1E88E5;
 `;
 
 export const Header = styled.View`

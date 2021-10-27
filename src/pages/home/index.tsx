@@ -28,7 +28,7 @@ import {
 
 export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
   return (
-    <View style={{backgroundColor:"#5EB098", padding: 20}}>
+    <View style={{backgroundColor:"#1E88E5", padding: 20}}>
       <Container>
         <Header>
           <OpenDrawerButton
@@ -57,7 +57,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Tricomoníase'})}
+            onPress={() => navigation.navigate("ContentPage",{ type: 4, title: 'Tricomoníase'})}
           >
             <MainButtonImage source={Trico} resizeMode='contain'/>
             <MainButtonText>
@@ -77,7 +77,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 4, title: 'Herpes'})}
+            onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Herpes'})}
           >
             <MainButtonImage source={Her} resizeMode='contain'/>
             <MainButtonText>

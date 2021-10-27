@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+import Figure17 from '../../../assets/content/trico/Figure17.jpg';
+
 import { 
   Container,
   Header,
@@ -83,14 +85,33 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
           {content?.text}
         </Content>
 
-        <ContentImage 
-          source={MandalaHiv}
-          resizeMode='contain'
-          borderRadius={10}
-        />
-        <ContentImageDescription>
-          {content?.img_description[0]}
-        </ContentImageDescription>
+        {
+          type === 1 && 
+          <>
+            <ContentImage 
+              source={MandalaHiv}
+              resizeMode='contain'
+              borderRadius={10}
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </>
+        }
+
+{
+          type === 4 && 
+          <>
+            <ContentImage 
+              source={Figure17}
+              resizeMode='contain'
+              borderRadius={10}
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </>
+        }
 
       </Main>
     </Container>

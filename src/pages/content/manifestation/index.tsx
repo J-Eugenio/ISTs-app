@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+import Figure10 from '../../../assets/content/herpes/Figure10.png';
+import Figure11 from '../../../assets/content/herpes/Figure11.png';
+import Figure12 from '../../../assets/content/herpes/Figure12.png';
+import Figure13 from '../../../assets/content/herpes/Figure13.png';
+
 import { 
   Container,
   Header,
@@ -14,7 +19,8 @@ import {
   TitleConceptContainer,
   ConceptNameContainer,
   ContentImage,
-  ContentImageDescription
+  ContentImageDescription,
+  Column
 } from './styles';
 import { TouchableOpacity } from 'react-native';
 
@@ -85,10 +91,18 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
           <ConceptName>Manifestação Clínicas</ConceptName>
         </ConceptNameContainer>
 
+          {
+            type === 1 &&
+            <Column>  
+              <Content>
+                {content?.text}
+              </Content>
+            </Column>
+          }
         
           {
-            type === 2 ?
-            <>
+            type === 2 &&
+            <Column>
               <Content>
               {content?.text[0]}
               </Content>
@@ -125,14 +139,82 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
               <Content>
                 {content?.text[3]}
               </Content>
-            </>
-            : 
-            <Content>
-              {content?.text}
-            </Content>
+            </Column>           
           }
         
+          {
+            type === 3 &&
+            <Column>
+              <Content>
+                {content?.text[0]}
+              </Content>
 
+              <Content>
+                {content?.text[1]}
+              </Content>
+
+              <ContentImage 
+                source={Figure10}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[0]}
+              </ContentImageDescription>
+
+              <ContentImage 
+                source={Figure11}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[1]}
+              </ContentImageDescription>
+
+              <Content>
+                {content?.text[2]}
+              </Content>
+
+              <ContentImage 
+                source={Figure12}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[2]}
+              </ContentImageDescription>
+
+              <Content>
+                {content?.text[3]}
+              </Content>
+
+              <Content>
+                {content?.text[4]}
+              </Content>
+
+              <Content>
+                {content?.text[5]}
+              </Content>
+
+              <ContentImage 
+                source={Figure13}
+                resizeMode='contain'
+              />
+              <ContentImageDescription>
+                {content?.img_description[3]}
+              </ContentImageDescription>
+
+              <Content>
+                {content?.text[6]}
+              </Content>
+            </Column>
+          }
+
+          {
+            type === 4 &&
+            <Column>
+              <Content>
+                {content?.text}
+              </Content>
+            </Column>
+          }
       </Main>
     </Container>
   )

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
+import Figure16 from '../../../assets/content/trico/Figure16.png';
+
 import { 
   Container,
   Header,
@@ -13,6 +15,9 @@ import {
   Content,
   TitleConceptContainer,
   ConceptNameContainer,
+  Column,
+  ContentImage,
+  ContentImageDescription
 } from './styles';
 import { TouchableOpacity } from 'react-native';
 
@@ -69,17 +74,36 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
       </Header>
 
       <Main>
-        <TitleConceptContainer>
-          <TitleConcept>{title}</TitleConcept>
-        </TitleConceptContainer>
+        <Column>
+          <TitleConceptContainer>
+            <TitleConcept>{title}</TitleConcept>
+          </TitleConceptContainer>
 
-        <ConceptNameContainer>
-          <ConceptName>Formas de Transmissão</ConceptName>
-        </ConceptNameContainer>
+          <ConceptNameContainer>
+            <ConceptName>Formas de Transmissão</ConceptName>
+          </ConceptNameContainer>
+        </Column>
 
-        <Content>
-          {content?.text}
-        </Content>
+        {
+          type === 4 ?
+          <Column>
+            <Content>
+              {content?.text}
+            </Content>
+
+            <ContentImage 
+              source={Figure16}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </Column>
+          :
+          <Content>
+            {content?.text}
+          </Content>
+        }
       </Main>
     </Container>
   )

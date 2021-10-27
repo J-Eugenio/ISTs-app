@@ -49,13 +49,13 @@ export default function App(){
       <StatusBar 
         style={Platform.OS === 'ios' ? 'light' : 'light'}
         animated
-        backgroundColor="#5EB098"
+        backgroundColor="#1E88E5"
       />
       <NavigationContainer>
         <Drawer.Navigator 
           initialRouteName="Home"
           drawerStyle={{
-            backgroundColor:'#5EB098',
+            backgroundColor:'#1E88E5',
           }}
           drawerContentOptions={{
             labelStyle: {

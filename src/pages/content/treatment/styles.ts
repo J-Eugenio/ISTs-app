@@ -4,7 +4,7 @@ export const Container = styled.View`
   display: flex;
   height: 100%;
   padding: 15px 20px;
-  background: #5EB098;
+  background: #1E88E5;
 `;
 
 export const Header = styled.View`
@@ -27,9 +27,8 @@ export const Title = styled.Text`
   font-size: 32px;
 `;
 
-export const Main = styled.View`
+export const Main = styled.ScrollView`
   display: flex;
-  align-items: center;
 
   margin-top: 15%;
   height: 59%;
@@ -48,6 +47,7 @@ export const ConceptName = styled.Text`
 
 export const Content = styled.Text`
   color: #FFF;
+  text-align: justify;
 `;
 
 export const TitleConceptContainer = styled.View`
@@ -74,4 +74,29 @@ export const ConceptNameContainer = styled.View`
   border-radius: 10px;
 
   margin-bottom: 30px;
+`;
+
+export const ContentImage = styled.Image`
+  display: flex;
+  flex: 1;
+  margin-top: 20px;
+  max-width: 80%;
+  max-height: 250px;
+  background-color: #FFF;
+  border-radius: 8px;
+  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+`;
+
+export const ContentImageDescription = styled.Text`
+  font-size: 10px;
+  text-align: justify;
+  font-style: italic;
+  margin-top: 3px;
+`;
+
+export const Column = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
