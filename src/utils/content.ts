@@ -206,5 +206,322 @@ const Content = [
   }
 ]
 
+const Quiz = [
+  {
+    id: 1,
+    question: `Sobre o HIV, marque a alternativa INCORRETA`,
+    answers: [
+      {
+        id: 1,
+        text: `O HIV é um retrovírus`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `O HIV é o vírus causador da AIDS`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `O HIV ataca as plaquetas`,
+        isCorrect: true
+      },
+      {
+        id: 4,
+        text: `HIV significa vírus da imunodeficiência humana`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `O HIV pode permanecer no corpo do paciente sem causar sintomas`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 2,
+    question: `A AIDS é uma doença viral que pode ser transmitida de diferentes modos. Marque a alternativa que não indica uma forma de transmissão da doença:`,
+    answers: [
+      {
+        id: 1,
+        text: `Transfusão de sangue`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `Compartilhamento de objetos cortantes`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Mãe para o filho durante a gestação`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Relação sexual desprotegida com pessoa contaminada`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `Aperto de mão`,
+        isCorrect: true
+      }
+    ]
+  },
+  {
+    id: 3,
+    question: `Uma dificuldade enfrentada pelos pesquisadores que buscam uma vacina contra o vírus da AIDS deve-se ao fato dele:`,
+    answers: [
+      {
+        id: 1,
+        text: `Não possuir a enzima transcriptase reversa`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `Alternar seu material genético entre DNA e RNA`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Ser um vírus de RNA, para os quais é impossível fazer vacinas`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Ter seu material genético sofrendo constantes mutações`,
+        isCorrect: true
+      },
+      {
+        id: 5,
+        text: `Possuir uma cápsula lipídica que impede a ação da vacina`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 4,
+    question: `O protozoário Trichomonas vaginalis é causador de uma IST conhecida por tricomoníase. A respeito dessa patologia, marque a alternativa INCORRETA.`,
+    answers: [
+      {
+        id: 1,
+        text: `A tricomoníase é uma doença que ataca principalmente o colo do útero, a vagina e a uretra feminina`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `A tricomoníase, além de ser transmitida por via sexual, pode ser contraída pelo compartilhamento de objetos pessoais e pela ingestão de água contaminada`,
+        isCorrect: true
+      },
+      {
+        id: 3,
+        text: `A tricomoníase tem sido frequentemente associada à transmissão do HIV`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Nas mulheres, a tricomoníase é responsável por provocar corrimentos abundantes`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `O Trichomonas vaginalis é um protozoário flagelado`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 5,
+    question: `A tricomoníase é uma infecção sexualmente transmissível, provocada pelo Trichomonas vaginalis. Nas mulheres, afeta a vulva, a vagina e o colo do útero. A mucosa vaginal pode ficar dolorida, erosada, inflamada com coloração amarelada e espumosa. Essa enfermidade ocorre através de:`,
+    answers: [
+      {
+        id: 1,
+        text: `Bacteriose`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `Virose`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Protozoose`,
+        isCorrect: true
+      },
+      {
+        id: 4,
+        text: `Esporozoose`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `Micose`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 6,
+    question: `O herpes genital é uma infecção sexualmente transmissível causada pelo Herpes simplex, um tipo:`,
+    answers: [
+      {
+        id: 1,
+        text: `de bactéria`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `de vírus`,
+        isCorrect: true
+      },
+      {
+        id: 3,
+        text: `de protozoário`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `de fungo`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `de animal`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 7,
+    question: `As infecções recorrentes pelo vírus herpes simples (HSV) podem ocorrer tanto no local de sua inoculação primária como em áreas adjacentes da superfície epitelial suprida pelo gânglio envolvido. Essa infecção é conhecida como herpes labial e representa uma das doenças infecciosas mais comumente encontradas pelo cirurgião-dentista. Assinale a alternativa que apresenta o fármaco mais apropriado para o tratamento dessa doença.`,
+    answers: [
+      {
+        id: 1,
+        text: `Aciclovir`,
+        isCorrect: true
+      },
+      {
+        id: 2,
+        text: `Amoxicilina`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Ibuprofeno`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Dexametasona`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `Dipirona`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 8,
+    question: `A sífilis é uma infecção sexualmente transmissível que pode ser evitada com medidas simples de proteção, como o uso de camisinha. Analise as alternativas a seguir e marque aquela que indica o nome de seu agente etiológico.`,
+    answers: [
+      {
+        id: 1,
+        text: `Treponema pallidum`,
+        isCorrect: true
+      },
+      {
+        id: 2,
+        text: `Neisseria gonorrhoeae`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Chlamydia trachomati`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Trichomonas vaginalis`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `Haemophilus ducreyi`,
+        isCorrect: false
+      }
+    ]
+  },
+  {
+    id: 9,
+    question: `Uma das lesões mais específicas da sífilis surge no local da inoculação. Geralmente ela é única, indolor e com base endurecida. Analise as alternativas abaixo e marque o nome dado a essa lesão.`,
+    answers: [
+      {
+        id: 1,
+        text: `Cancro mole`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `Afta`,
+        isCorrect: false
+      },
+      {
+        id: 3,
+        text: `Roséola sifilítica`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `Sifílides`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `Cancro duro`,
+        isCorrect: true
+      }
+    ]
+  },
+  {
+    id: 10,
+    question: `A sífilis é uma infecção sexualmente transmissível grave que, se não tratada adequadamente, pode ocasionar a morte do acometido. A respeito dessa doença, marque a alternativa CORRETA:`,
+    answers: [
+      {
+        id: 1,
+        text: `A sífilis é transmitida exclusivamente pela via sexual`,
+        isCorrect: false
+      },
+      {
+        id: 2,
+        text: `A sífilis pode ficar um período sem manifestações clínicas, dando uma impressão errônea de cura`,
+        isCorrect: true
+      },
+      {
+        id: 3,
+        text: `A sífilis é uma doença que atinge apenas a pele e a região genital`,
+        isCorrect: false
+      },
+      {
+        id: 4,
+        text: `A sífilis, diferentemente de outras IST’s, não pode ser transmitida para o bebê durante a gestação`,
+        isCorrect: false
+      },
+      {
+        id: 5,
+        text: `A sífilis é uma doença viral`,
+        isCorrect: false
+      }
+    ]
+  }
+]
 
-export { Content }
+interface AnswerProps {
+  id: number;
+  text: string;
+  isCorrect:boolean;
+}
+export { Content, Quiz, AnswerProps}

@@ -21,6 +21,7 @@ import { Manifestation } from './src/pages/content/manifestation';
 import { Transmitting } from './src/pages/content/transmitting';
 import { Prevention } from './src/pages/content/prevention';
 import { Treatment } from './src/pages/content/treatment';
+import { Quiz } from './src/pages/Quiz';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -40,6 +41,7 @@ function StackPages() {
       <Stack.Screen name="Transmitting" component={Transmitting} />
       <Stack.Screen name="Treatment" component={Treatment} />
       <Stack.Screen name="Prevention" component={Prevention} />
+      <Stack.Screen name="Quiz" component={Quiz} />
     </Stack.Navigator>
   )
 }

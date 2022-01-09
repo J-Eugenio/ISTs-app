@@ -56,6 +56,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
     setConcept(content_filtered?.concept);
     setClinicalManifestation(content_filtered?.clinical_manifestations);
     setTransmissionForm(content_filtered?.transmission_forms);
+    //@ts-ignore
     setTreatmentAndPrognosis(content_filtered?.treatment_and_prognosis)
     setPrevention(content_filtered?.forms_of_prevention)
   }, [content_filtered])

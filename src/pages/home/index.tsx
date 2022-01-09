@@ -89,6 +89,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <MainQuiz>
           <MainButton
             activeOpacity={0.7}
+            onPress={() => navigation.navigate("Quiz")}
           >
             <MainButtonText>
               Quiz
