@@ -10,8 +10,8 @@ import Her from '../../assets/dst-images-button/her.png';
 import Sifi from '../../assets/dst-images-button/sifi.png';
 import Trico from '../../assets/dst-images-button/trico.png';
 
-import { DrawerContentComponentProps } from '@react-navigation/drawer'
-import { StackHeaderProps } from '@react-navigation/stack'
+import { DrawerContentComponentProps } from '@react-navigation/drawer';
+import { StackHeaderProps } from '@react-navigation/stack';
 import * as Sharing from 'expo-sharing';
 
 import { 
@@ -33,7 +33,6 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <Header>
           <OpenDrawerButton
             onPress={() => navigation.openDrawer()}
-            
           >
             <Icon 
               name="bars"

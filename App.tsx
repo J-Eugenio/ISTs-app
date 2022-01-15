@@ -83,34 +83,6 @@ export default function App(){
           />
 
           <Drawer.Screen 
-            name="Contato" 
-            component={Contact}
-            options={{
-              drawerIcon: () => (
-                <Icon 
-                  name="user-alt"
-                  size={20}
-                  color="#FFF"
-                />
-              )
-            }}
-          />
-
-          <Drawer.Screen 
-            name="Avaliação" 
-            component={Rate}
-            options={{
-              drawerIcon: () => (
-                <Icon 
-                  name="crown"
-                  size={20}
-                  color="#FFF"
-                />
-              )
-            }}
-          />
-
-          <Drawer.Screen 
             name="Autores" 
             component={Authors}
             options={{
@@ -123,6 +95,41 @@ export default function App(){
               )
             }}
           />
+
+          {
+            /**
+             * <Drawer.Screen 
+            name="Avaliação" 
+            component={Rate}
+            options={{
+              drawerIcon: () => (
+                <Icon 
+                  name="crown"
+                  size={20}
+                  color="#FFF"
+                />
+              )
+            }}
+          />
+             */
+          }
+
+          {/**
+           * 
+           <Drawer.Screen 
+            name="Contato" 
+            component={Contact}
+            options={{
+              drawerIcon: () => (
+                <Icon 
+                  name="user-alt"
+                  size={20}
+                  color="#FFF"
+                />
+              )
+            }}
+          />
+           */}
         </Drawer.Navigator>
       </NavigationContainer>
     </>

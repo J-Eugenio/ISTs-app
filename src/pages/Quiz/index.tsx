@@ -52,6 +52,17 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswersProps[]>([]);
   const [modal, openModal] = useState(true);
 
+  const [qt1, setQt1] = useState(false);
+  const [qt2, setQt2] = useState(false);
+  const [qt3, setQt3] = useState(false);
+  const [qt4, setQt4] = useState(false);
+  const [qt5, setQt5] = useState(false);
+  const [qt6, setQt6] = useState(false);
+  const [qt7, setQt7] = useState(false);
+  const [qt8, setQt8] = useState(false);
+  const [qt9, setQt9] = useState(false);
+  const [qt10, setQt10] = useState(false);
+
   const charQuestions = {
     0: 'A',
     1: 'B',
@@ -141,7 +152,10 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
                             onPress={() => AddAnswer(quiz.id, answer.id)}
                             isCorrect={answer.isCorrect}
                           >
-                            <AnswerID>{`${charQuestions[indexAnswer]})`}</AnswerID>
+                            <AnswerID>{`${
+                              //@ts-ignore
+                              charQuestions[indexAnswer]
+                              })`}</AnswerID>
                             <Answer>{answer.text}</Answer>
                           </AnswerContainer>
                         </Col>
