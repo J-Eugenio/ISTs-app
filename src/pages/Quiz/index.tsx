@@ -50,7 +50,9 @@ interface QuizAnswersProps {
 export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
 
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswersProps[]>([]);
-  const [modal, openModal] = useState(true);
+  const [modal, openModal] = useState(false);
+  const [result, setResult] = useState(0);
+  const [score, setScore] = useState(0);
 
   const [qt1, setQt1] = useState(false);
   const [qt2, setQt2] = useState(false);
@@ -95,6 +97,76 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   function GoBack(){
     navigation.goBack();
     setQuizAnswers([])
+  }
+
+  function QuizResult(){
+    setScore(0)
+    //Questao_01
+    if(quizAnswers.find(quiz => quiz.questionID === 1)?.answerID === 3){
+      setQt1(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_02
+    if(quizAnswers.find(quiz => quiz.questionID === 2)?.answerID === 5){
+      setQt2(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_03
+    if(quizAnswers.find(quiz => quiz.questionID === 3)?.answerID === 4){
+      setQt3(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_04
+    if(quizAnswers.find(quiz => quiz.questionID === 4)?.answerID === 2){
+      setQt4(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_05
+    if(quizAnswers.find(quiz => quiz.questionID === 5)?.answerID === 3){
+      setQt5(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_06
+    if(quizAnswers.find(quiz => quiz.questionID === 6)?.answerID === 2){
+      setQt6(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_07
+    if(quizAnswers.find(quiz => quiz.questionID === 7)?.answerID === 1){
+      setQt7(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_08
+    if(quizAnswers.find(quiz => quiz.questionID === 8)?.answerID === 1){
+      setQt8(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_09
+    if(quizAnswers.find(quiz => quiz.questionID === 9)?.answerID === 5){
+      setQt9(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    //Questao_10
+    if(quizAnswers.find(quiz => quiz.questionID === 10)?.answerID === 2){
+      setQt10(true);
+      setScore(oldValue => oldValue+=1);
+    }
+
+    openModal(true);
+  }
+
+  function CloseModal(){
+    openModal(false);
+    setScore(0);
   }
 
   return(
@@ -168,7 +240,7 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
         }
 
         <BtnConfirmar
-          onPress={() => console.log(quizAnswers)}
+          onPress={() => QuizResult()}
           isDisabled={quizAnswers.length < 10}
           disabled={quizAnswers.length < 10}
         >
@@ -184,7 +256,18 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
         >
           <ModalContainer>
             <ScorePage 
-              onClose={() => openModal(false)}
+              onClose={() => CloseModal()}
+              qt1={qt1}
+              qt2={qt2}
+              qt3={qt3}
+              qt4={qt4}
+              qt5={qt5}
+              qt6={qt6}
+              qt7={qt7}
+              qt8={qt8}
+              qt9={qt9}
+              qt10={qt10}
+              score={score}
             />
           </ModalContainer>
         </Modal>
