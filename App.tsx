@@ -96,10 +96,8 @@ export default function App(){
             }}
           />
 
-          {
-            /**
-             * <Drawer.Screen 
-            name="Avaliação" 
+          <Drawer.Screen 
+            name="Referências" 
             component={Rate}
             options={{
               drawerIcon: () => (
@@ -111,25 +109,20 @@ export default function App(){
               )
             }}
           />
-             */
-          }
 
-          {/**
-           * 
-           <Drawer.Screen 
-            name="Contato" 
+          <Drawer.Screen 
+            name="Sobre o APP" 
             component={Contact}
             options={{
               drawerIcon: () => (
                 <Icon 
-                  name="user-alt"
+                  name="info-circle"
                   size={20}
                   color="#FFF"
                 />
               )
             }}
           />
-           */}
         </Drawer.Navigator>
       </NavigationContainer>
     </>

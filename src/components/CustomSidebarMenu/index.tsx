@@ -5,11 +5,18 @@ import {
   Image,
   Text
 } from 'react-native';
-
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import * as Linking from 'expo-linking';
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
+
+import {
+  SharedContainer,
+  SharedButton,
+  SharedText
+} from './styles';
 
 import Logo from '../../assets/logo.png';
 //@ts-ignore
@@ -26,6 +33,19 @@ const CustomSidebarMenu = (props) => {
       </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
+        
+        <SharedContainer>
+          <SharedButton
+            onPress={() => Linking.openURL("http://play.google.com/store/apps/details?id=com.JeugS.itis")}
+          >
+            <Icon 
+              name="share-alt"
+              size={20}
+              color="#FFF"
+            />
+            <SharedText>Compartilhe o APP</SharedText>
+          </SharedButton>
+        </SharedContainer>
       </DrawerContentScrollView>
     </View>
   );
