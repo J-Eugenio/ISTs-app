@@ -19,7 +19,7 @@ export const Rate:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
     <Container>
       <>
         <GoBackButton
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.openDrawer()}
           style={{ width: 25}}
         >
           <Icon 
