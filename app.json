@@ -4,7 +4,7 @@
     "slug": "itis_app",
     "version": "8.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon2.png",
+    "icon": "./assets/icon3.png",
     "splash": {
       "image": "./assets/new_splash2.png",
       "resizeMode": "contain",
@@ -21,14 +21,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon2.png",
+        "foregroundImage": "./assets/icon3.png",
         "backgroundColor": "#1E88E5"
       },
       "package": "com.JeugS.itis",
       "versionCode": 8.1
     },
     "web": {
-      "favicon": "./assets/icon2.png"
+      "favicon": "./assets/icon3.png"
     }
   }
 }
