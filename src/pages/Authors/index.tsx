@@ -17,6 +17,7 @@ import {
   Social,
   SocialValue,
  } from './styles';
+import { FundoPNG } from '../../components/FundoPNG';
 
 export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   /**
@@ -132,6 +133,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
         </CardAuthor>
 
       </Main>
+      <FundoPNG />
     </Container>
   )
 }

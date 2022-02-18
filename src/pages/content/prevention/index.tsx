@@ -20,6 +20,7 @@ import {
 } from './styles';
 import { TouchableOpacity } from 'react-native';
 import MandalaHiv from '../../../assets/content/hiv/mandala.jpg';
+import { FundoPNG } from '../../../components/FundoPNG';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -112,7 +113,7 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
             </ContentImageDescription>
           </>
         }
-
+        <FundoPNG type={2}/>
       </Main>
     </Container>
   )

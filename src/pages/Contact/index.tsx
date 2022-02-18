@@ -10,6 +10,7 @@ import {
   Divider,
   OpenDrawerButton
 } from './styles';
+import { FundoPNG } from '../../components/FundoPNG';
 
 export const Contact:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   return(
@@ -42,7 +43,7 @@ export const Contact:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
           </Content>
         </Main>
       </>
-
+      <FundoPNG />
     </Container>
   )
 }

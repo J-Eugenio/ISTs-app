@@ -19,6 +19,7 @@ import {
   Button,
   ButtonTitle,
 } from './styles';
+import { FundoPNG } from '../../components/FundoPNG';
 
 
 interface ContentPageProps extends DrawerContentComponentProps {
@@ -155,6 +156,7 @@ export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) =>
           </ButtonContainer>
         </ButtonGroup>
       </Main>
+      <FundoPNG type={1}/>
     </Container>
   )
 }

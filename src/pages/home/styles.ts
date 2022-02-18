@@ -1,12 +1,16 @@
 import styled from 'styled-components/native';
 import { SafeAreaView } from 'react-native';
 
+interface ButtonType {
+  type?: number;
+}
+
 export const Container = styled.SafeAreaView`
   display: flex;
   height: 100%;
   background: #1E88E5;
-  justify-content: center;
   align-items: center;
+  z-index: 1;
 `;
 
 export const Header = styled.View`
@@ -33,14 +37,14 @@ export const Main = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex: 1;
+ 
   flex-wrap: wrap;
   margin-top: 15%;
 `;
 
-export const MainButton = styled.TouchableOpacity`
+export const MainButton = styled.TouchableOpacity<ButtonType>`
   display: flex;
-  background: #FFFFFF;
+  background: ${({ type }) => type === 1 ? '#DC143C': type === 2 ? '#0000EE' : type === 3 ? '#3CB371' : type === 4 ? '#CDCD00' : '#FFF'};
   width: 150px;
   height: 130px;
   justify-content: center;
@@ -50,13 +54,26 @@ export const MainButton = styled.TouchableOpacity`
   margin-bottom: 15px;
 `;
 
-export const MainButtonImage = styled.Image``;
+export const MainButtonImage = styled.Image`
+  border-radius: 20px;
+`;
 
-export const MainButtonText = styled.Text`
+export const MainButtonText = styled.Text<ButtonType>`
   color: #514766;
   font-weight: 600;
+  color:${({ type }) => type ? '#FFF' : '#000'};
 `;
 
 export const MainQuiz = styled.View`
 
+`;
+
+export const Fundo = styled.Image`
+  position: absolute;
+  bottom: -18px;
+  left: -15%;
+  height: 500px;
+  width: 350px;
+  border-radius: 25px;
+  overflow: hidden;
 `;

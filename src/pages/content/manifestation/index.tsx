@@ -27,6 +27,7 @@ import { TouchableOpacity } from 'react-native';
 import primariaSifilis from '../../../assets/content/sifilis/primaria.png';
 import secundariaSifilis from '../../../assets/content/sifilis/secundaria.png';
 import terciariaSifilis from '../../../assets/content/sifilis/terciaria.png';
+import { FundoPNG } from '../../../components/FundoPNG';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -215,6 +216,8 @@ export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) 
               </Content>
             </Column>
           }
+
+        <FundoPNG type={2}/>
       </Main>
     </Container>
   )
