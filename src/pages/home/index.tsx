@@ -98,9 +98,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
               Herpes
             </MainButtonText>
           </MainButton>
-        </Main>
 
-        <MainQuiz>
           <MainButton
             activeOpacity={0.7}
             onPress={() => navigation.navigate("Quiz")}
@@ -109,8 +107,16 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
               Quiz
             </MainButtonText>
           </MainButton>
-        </MainQuiz>
 
+          <MainButton
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Herpes'})}
+          >
+            <MainButtonText>
+              Sugestões
+            </MainButtonText>
+          </MainButton>
+        </Main>
         <FundoPNG type={1}/>
       </Container>
     </View>

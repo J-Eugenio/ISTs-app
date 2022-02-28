@@ -65,7 +65,10 @@ export const MainButtonText = styled.Text<ButtonType>`
 `;
 
 export const MainQuiz = styled.View`
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
 `;
 
 export const Fundo = styled.Image`
