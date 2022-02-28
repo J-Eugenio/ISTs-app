@@ -110,7 +110,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
 
           <MainButton
             activeOpacity={0.7}
-            onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Herpes'})}
+            onPress={() => {}}
           >
             <MainButtonText>
               Sugestões

@@ -100,7 +100,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
           <InfoContainer>
             <Author>Allyssandra Maria Lima Rodrigues Maia</Author>
             <Social
-              onPress={() => Linking.openURL('instagram://user?username=allyssadrarodrigues')}
+              onPress={() => Linking.openURL('instagram://user?username=allyssandrarodrigues')}
             >
               <Icon 
                 name="instagram"
