@@ -3,6 +3,7 @@ import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Figure16 from '../../../assets/content/trico/Figure16.png';
+import FormaDeTransmisao from '../../../assets/content/hiv/forma_trans.png';
 
 import { 
   Container,
@@ -93,6 +94,22 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
 
             <ContentImage 
               source={Figure16}
+              resizeMode='contain'
+            />
+            <ContentImageDescription>
+              {content?.img_description[0]}
+            </ContentImageDescription>
+          </Column>
+
+          : type === 1 ?
+          
+          <Column>
+            <Content>
+              {content?.text}
+            </Content>
+
+            <ContentImage 
+              source={FormaDeTransmisao}
               resizeMode='contain'
             />
             <ContentImageDescription>

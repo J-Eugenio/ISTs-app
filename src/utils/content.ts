@@ -15,7 +15,11 @@ const Content = [
       text: `
       Somente em secreções como sangue, esperma, secreção vaginal e leite materno, o vírus aparece em quantidade suficiente para causar a doença. Para haver a transmissão, o líquido contaminado de uma pessoa tem que penetrar no organismo de outra. Isto se dá através de relação sexual (heterossexual ou homossexual), ao se compartilhar seringas, em acidentes com agulhas e objetos cortantes infectados, na transfusão de sangue contaminado, na transmissão vertical da mãe infectada para o feto durante a gestação ou o trabalho de parto e durante a amamentação.
       `,
-      img_description: []
+      img_description: [
+        `
+        Figura 2. Infecção de uma célula CD4 pelo vírus da imunodeficiência humana (HIV). (a) Reconhecimento e interação do HIV ao receptor CD4 e ao correceptor CCR5. (b) O nucleocapsídeo viral eventualmente penetra a célula.
+        `
+      ]
     },
     clinical_manifestations: {
       text: [`
@@ -91,8 +95,7 @@ const Content = [
   {
     type: 3,//herpes
     concept: {
-      text: `
-      É uma doença infecciosa crônica, de transmissão sexual e eventualmente transplacentária produzida pelo Treponema pallidum. Caracteriza-se por apresentar longos períodos de silêncio clínico e capacidade de atingir múltiplos sistemas orgânicos, produzindo, mais frequentemente, lesões cutâneas, mucosas, cardiovasculares e nervosas.
+      text: `O herpes é uma das infecções sexualmente transmissíveis mais comuns. O termo herpes deriva da palavra grega antiga que significa arrastar ou rastejar, o que faz aparentemente uma alusão à tendência à infecção recorrente, latente e com poder de disseminação. Os vírus herpes simplex (HSV, de herpes simplex vírus) podem ser divididos em dois grupos identificáveis, HSV-1 e HSV-2. Os nomes oficiais são herpes-vírus humanos 1 e 2. O HSV-1 e transmissível principalmente pelas vias orais ou respiratórias, e a infecção normalmente acontece na infância. Estudos sorológicos mostram que 90% da população dos Estados Unidos já foi infectada. 
       `,
       img_description:[
         'Figura 8. Esquema representativo da estrutura dos HSV',

@@ -25,7 +25,7 @@
         "backgroundColor": "#1E88E5"
       },
       "package": "com.JeugS.itis",
-      "versionCode": 8.1
+      "versionCode": 9
     },
     "web": {
       "favicon": "./assets/icon2.png"
