@@ -3,8 +3,8 @@ import styled from 'styled-components/native'
 export const Container = styled.View`
   display: flex;
   height: 100%;
-  padding: 15px 20px;
   background: #1E88E5;
+  padding: 4px;
 `;
 
 export const Header = styled.View`
@@ -52,6 +52,7 @@ export const Content = styled.Text`
   width: 100%;
   text-align: justify;
   color: #FFF;
+  padding: 20px;
 `;
 
 export const TitleConceptContainer = styled.View`
@@ -76,7 +77,7 @@ export const ConceptNameContainer = styled.View`
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-
+  
   margin-bottom: 30px;
 `;
 
@@ -102,4 +103,5 @@ export const Column = styled.View`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 250px;
 `;

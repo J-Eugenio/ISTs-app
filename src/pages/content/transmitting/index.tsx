@@ -21,6 +21,7 @@ import {
   ContentImageDescription
 } from './styles';
 import { TouchableOpacity } from 'react-native';
+import { FundoPNG } from '../../../components/FundoPNG';
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -121,6 +122,9 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
             {content?.text}
           </Content>
         }
+
+        <FundoPNG type={2}/>
+
       </Main>
     </Container>
   )

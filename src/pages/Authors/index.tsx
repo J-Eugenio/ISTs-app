@@ -17,6 +17,7 @@ import {
   Social,
   SocialValue,
  } from './styles';
+import { FundoPNG } from '../../components/FundoPNG';
 
 export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   /**
@@ -99,7 +100,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
           <InfoContainer>
             <Author>Allyssandra Maria Lima Rodrigues Maia</Author>
             <Social
-              onPress={() => Linking.openURL('instagram://user?username=allyssadrarodrigues')}
+              onPress={() => Linking.openURL('instagram://user?username=allyssandrarodrigues')}
             >
               <Icon 
                 name="instagram"
@@ -132,6 +133,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
         </CardAuthor>
 
       </Main>
+      <FundoPNG />
     </Container>
   )
 }

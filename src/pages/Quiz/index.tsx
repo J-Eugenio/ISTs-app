@@ -17,6 +17,7 @@ import Aids from '../../assets/dst-images-button/aids.png';
 import Her from '../../assets/dst-images-button/her.png';
 import Sifi from '../../assets/dst-images-button/sifi.png';
 import Trico from '../../assets/dst-images-button/trico.png';
+import QuizLogo from '../../assets/quiz.png';
 
 import {
   Container,
@@ -39,7 +40,9 @@ import {
   QuizImage,
   QuizImageText,
   GoBackButton,
-  ModalContainer
+  ModalContainer,
+  QuizLg,
+  QuizLogoContainer
 } from './styles';
 
 interface QuizAnswersProps {
@@ -186,7 +189,10 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
                 />
               </GoBackButton>
 
-              <QuizTitle>QUIZ</QuizTitle>
+              <QuizLogoContainer>
+                <QuizLg source={QuizLogo}resizeMode='contain'/>
+              </QuizLogoContainer>
+
               <QuizDescription>Quiz sobre os temas:</QuizDescription>
               <QuizThemeContainer>
                 <QuizTheme>

@@ -15,10 +15,13 @@ import {
 import {
   SharedContainer,
   SharedButton,
-  SharedText
+  SharedText,
+
 } from './styles';
 
 import Logo from '../../assets/logo.png';
+import { FundoPNG } from '../FundoPNG';
+
 //@ts-ignore
 const CustomSidebarMenu = (props) => {
 
@@ -46,7 +49,9 @@ const CustomSidebarMenu = (props) => {
             <SharedText>Compartilhe o APP</SharedText>
           </SharedButton>
         </SharedContainer>
+
       </DrawerContentScrollView>
+      <FundoPNG />
     </View>
   );
 };

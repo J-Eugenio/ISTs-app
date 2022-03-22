@@ -9,6 +9,7 @@ import Aids from '../../assets/dst-images-button/aids.png';
 import Her from '../../assets/dst-images-button/her.png';
 import Sifi from '../../assets/dst-images-button/sifi.png';
 import Trico from '../../assets/dst-images-button/trico.png';
+//import FundoPNG from '../../assets/fundo.png';
 
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { StackHeaderProps } from '@react-navigation/stack';
@@ -23,8 +24,12 @@ import {
   MainButton,
   MainButtonImage,
   MainButtonText,
-  MainQuiz
+  MainQuiz,
+  Fundo,
+  QrCodeButtonImage
 } from './styles';
+import { FundoPNG } from '../../components/FundoPNG';
+import QrCodeExample from '../../assets/qrcode-example.png';
 
 export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
   return (
@@ -46,46 +51,56 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
         <Main>
           <MainButton
             activeOpacity={0.7}
+            type={1}
             onPress={() => navigation.navigate("ContentPage",{ type: 1, title: 'AIDS'})}
           >
             <MainButtonImage source={Aids} resizeMode='contain'/>
-            <MainButtonText>
+            <MainButtonText
+              type={1}
+            >
               AIDS
             </MainButtonText>
           </MainButton>
 
           <MainButton
             activeOpacity={0.7}
+            type={2}
             onPress={() => navigation.navigate("ContentPage",{ type: 4, title: 'Tricomoníase'})}
           >
             <MainButtonImage source={Trico} resizeMode='contain'/>
-            <MainButtonText>
+            <MainButtonText
+              type={1}
+            >
               Tricomoníase
             </MainButtonText>
           </MainButton>
 
           <MainButton
             activeOpacity={0.7}
+            type={3}
             onPress={() => navigation.navigate("ContentPage",{ type: 2, title: 'Sífilis'})}
           >
             <MainButtonImage source={Sifi} resizeMode='contain'/>
-            <MainButtonText>
+            <MainButtonText
+              type={1}
+            >
               Sífilis
             </MainButtonText>
           </MainButton>
 
           <MainButton
             activeOpacity={0.7}
+            type={4}
             onPress={() => navigation.navigate("ContentPage",{ type: 3, title: 'Herpes'})}
           >
             <MainButtonImage source={Her} resizeMode='contain'/>
-            <MainButtonText>
+            <MainButtonText
+              type={1}
+            >
               Herpes
             </MainButtonText>
           </MainButton>
-        </Main>
 
-        <MainQuiz>
           <MainButton
             activeOpacity={0.7}
             onPress={() => navigation.navigate("Quiz")}
@@ -94,7 +109,15 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
               Quiz
             </MainButtonText>
           </MainButton>
-        </MainQuiz>
+
+          <MainButton
+            activeOpacity={0.7}
+            onPress={() => {}}
+          >
+            <QrCodeButtonImage source={QrCodeExample} resizeMode='contain'/>
+          </MainButton>
+        </Main>
+        <FundoPNG type={1}/>
       </Container>
     </View>
   )

@@ -17,3 +17,13 @@ export const SharedText = styled.Text`
   color: #FFF;
   font-weight: bold;
 `;
+
+export const Fundo = styled.Image`
+position: absolute;
+bottom: 0px;
+left: -35px;
+height: 500px;
+width: 350px;
+border-radius: 25px;
+overflow: hidden;
+`;

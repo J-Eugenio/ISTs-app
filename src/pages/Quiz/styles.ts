@@ -95,6 +95,11 @@ export const QuizContainer = styled.View`
   margin: 20px 0;
 `;
 
+export const QuizLogoContainer = styled.View`
+  display: flex;
+  align-items: center;
+`;
+
 export const QuizTitle = styled.Text`
   font-size: 40px;
   color: #FFF;
@@ -124,6 +129,14 @@ export const QuizImage = styled.Image`
   border-radius: 25px;
   overflow: hidden;
   background-color: #FFF;
+  margin: 0 10px;
+`;
+
+export const QuizLg = styled.Image`
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+  overflow: hidden;
   margin: 0 10px;
 `;
 
