@@ -11,7 +11,8 @@
       "backgroundColor": "#1E88E5"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/c5928d21-ff88-4c68-9391-8fb5a16bf2ae"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -25,10 +26,18 @@
         "backgroundColor": "#1E88E5"
       },
       "package": "com.JeugS.itis",
-      "versionCode": 13
+      "versionCode": 14
     },
     "web": {
       "favicon": "./assets/icon3.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c5928d21-ff88-4c68-9391-8fb5a16bf2ae"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
