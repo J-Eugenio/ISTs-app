@@ -18,9 +18,10 @@ import {
   ContentImage,
   ContentImageDescription
 } from './styles';
-import { TouchableOpacity } from 'react-native';
-import MandalaHiv from '../../../assets/content/hiv/mandala.jpg';
 import { FundoPNG } from '../../../components/FundoPNG';
+import MandalaHiv from '../../../assets/content/hiv/mandala.jpg';
+import { TouchableOpacity, Animated } from 'react-native';
+import { PinchGestureHandler, State } from "react-native-gesture-handler";
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -41,6 +42,30 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();
+
+  const [zIndex001, setZIndex001] = useState(0)
+  const [zIndex002, setZIndex002] = useState(0)
+
+  const scale01 = new Animated.Value(1);
+  const scale02 = new Animated.Value(1);
+
+  const onZoomEventFunction = (scale: any) => Animated.event(
+    [{
+      nativeEvent: { scale: scale }
+    }],
+    {
+      useNativeDriver: true
+    }
+  )
+
+  const onZoomStateChangeFunction = (event: any, scale: any) => {
+    if(event.nativeEvent.oldState == State.ACTIVE){
+      Animated.spring(scale, {
+        toValue: 1,
+        useNativeDriver: true
+      }).start();
+    }
+  }
 
   useEffect(() => {
     setTitle(route.params.title);
@@ -89,25 +114,43 @@ export const Prevention:React.FC<ContentPageProps> = ({ navigation, route }) => 
         {
           type === 1 && 
           <>
-            <ContentImage 
-              source={MandalaHiv}
-              resizeMode='contain'
-              borderRadius={10}
-            />
+            <PinchGestureHandler
+              onGestureEvent={onZoomEventFunction(scale01)}
+              onHandlerStateChange={(event) => onZoomStateChangeFunction(event, scale01)}
+              onActivated={() => { 
+                setZIndex001(10);
+                setZIndex002(0);
+              }}
+            >
+              <ContentImage 
+                source={MandalaHiv}
+                style={{ transform: [{ scale:  scale01}], zIndex: zIndex001 }}
+                borderRadius={10}
+              />
+            </PinchGestureHandler>
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>
           </>
         }
 
-{
+        {
           type === 4 && 
           <>
-            <ContentImage 
-              source={Figure17}
-              resizeMode='contain'
-              borderRadius={10}
-            />
+            <PinchGestureHandler
+              onGestureEvent={onZoomEventFunction(scale02)}
+              onHandlerStateChange={(event) => onZoomStateChangeFunction(event, scale02)}
+              onActivated={() => { 
+                setZIndex001(0);
+                setZIndex002(10);
+              }}
+            >
+              <ContentImage 
+                source={Figure17}
+                style={{ transform: [{ scale:  scale02}], zIndex: zIndex002 }}
+                borderRadius={10}
+              />
+            </PinchGestureHandler>
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>

@@ -19,10 +19,9 @@ export const ScoreMainContainer = styled.ImageBackground`
   display: flex;
   flex: 1;
   align-items: center;
-  height: 70px;
+  height: 100%;
   width: 100%;
   border-radius: 10px;
-  padding: 20px;
 `;
 
 export const CloseButton = styled.TouchableOpacity`
@@ -98,7 +97,7 @@ export const Score = styled.Text`
 
 export const QuizAnswerContainer = styled.View`
   display: flex;
-  width: 100%;
+  width: 80%;
   padding: 10px 25px;
   flex-direction: row;
   flex-wrap: wrap;

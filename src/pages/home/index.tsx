@@ -29,7 +29,7 @@ import {
   QrCodeButtonImage
 } from './styles';
 import { FundoPNG } from '../../components/FundoPNG';
-import QrCodeExample from '../../assets/qrcode-example.png';
+import QrCode from '../../assets/qr-code.jpeg';
 
 export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
   return (
@@ -114,7 +114,7 @@ export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
             activeOpacity={0.7}
             onPress={() => {}}
           >
-            <QrCodeButtonImage source={QrCodeExample} resizeMode='contain'/>
+            <QrCodeButtonImage source={QrCode} resizeMode='contain'/>
           </MainButton>
         </Main>
         <FundoPNG type={1}/>

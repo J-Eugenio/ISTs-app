@@ -170,6 +170,7 @@ export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   function CloseModal(){
     openModal(false);
     setScore(0);
+    setQuizAnswers([]);
   }
 
   return(

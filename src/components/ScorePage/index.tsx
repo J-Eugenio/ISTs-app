@@ -5,10 +5,6 @@ import HeaderBG from '../../assets/ui/common_ribbon_green.png';
 import StartBG from '../../assets/ui/complete_star_bg.png';
 import StartImg from '../../assets/ui/complete_star.png';
 
-import {
-  Text
-} from 'react-native';
-
 interface Props {
   onClose: () => void;
   score: number;

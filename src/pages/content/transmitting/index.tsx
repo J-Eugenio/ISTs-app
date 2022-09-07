@@ -20,8 +20,11 @@ import {
   ContentImage,
   ContentImageDescription
 } from './styles';
-import { TouchableOpacity } from 'react-native';
 import { FundoPNG } from '../../../components/FundoPNG';
+
+import { TouchableOpacity, Animated } from 'react-native';
+import { PinchGestureHandler, State } from "react-native-gesture-handler";
+
 
 interface ContentPageProps extends DrawerContentComponentProps {
   route:{
@@ -43,6 +46,30 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();
+
+  const [zIndex001, setZIndex001] = useState(0)
+  const [zIndex002, setZIndex002] = useState(0)
+
+  const scale01 = new Animated.Value(1);
+  const scale02 = new Animated.Value(1);
+
+  const onZoomEventFunction = (scale: any) => Animated.event(
+    [{
+      nativeEvent: { scale: scale }
+    }],
+    {
+      useNativeDriver: true
+    }
+  )
+
+  const onZoomStateChangeFunction = (event: any, scale: any) => {
+    if(event.nativeEvent.oldState == State.ACTIVE){
+      Animated.spring(scale, {
+        toValue: 1,
+        useNativeDriver: true
+      }).start();
+    }
+  }
 
   useEffect(() => {
     setTitle(route.params.title);
@@ -93,10 +120,20 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
               {content?.text}
             </Content>
 
-            <ContentImage 
-              source={Figure16}
-              resizeMode='contain'
-            />
+            <PinchGestureHandler
+              onGestureEvent={onZoomEventFunction(scale01)}
+              onHandlerStateChange={(event) => onZoomStateChangeFunction(event, scale01)}
+              onActivated={() => { 
+                setZIndex001(10);
+                setZIndex002(0);
+              }}
+            >
+              <ContentImage 
+                source={Figure16}
+                style={{ transform: [{ scale:  scale01}], zIndex: zIndex001 }}
+              />
+            </PinchGestureHandler>
+
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>
@@ -109,10 +146,19 @@ export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) =
               {content?.text}
             </Content>
 
-            <ContentImage 
-              source={FormaDeTransmisao}
-              resizeMode='contain'
-            />
+            <PinchGestureHandler
+              onGestureEvent={onZoomEventFunction(scale02)}
+              onHandlerStateChange={(event) => onZoomStateChangeFunction(event, scale02)}
+              onActivated={() => { 
+                setZIndex001(0);
+                setZIndex002(10);
+              }}
+            >
+              <ContentImage 
+                source={FormaDeTransmisao}
+                style={{ transform: [{ scale:  scale02}], zIndex: zIndex002 }}
+              />
+            </PinchGestureHandler>
             <ContentImageDescription>
               {content?.img_description[0]}
             </ContentImageDescription>

@@ -2,11 +2,11 @@
   "expo": {
     "name": "IST's",
     "slug": "itis_app",
-    "version": "8.0.4",
+    "version": "8.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon3.png",
     "splash": {
-      "image": "./assets/new_splash2.png",
+      "image": "./assets/new_splash3.png",
       "resizeMode": "contain",
       "backgroundColor": "#1E88E5"
     },
@@ -25,7 +25,7 @@
         "backgroundColor": "#1E88E5"
       },
       "package": "com.JeugS.itis",
-      "versionCode": 11
+      "versionCode": 13
     },
     "web": {
       "favicon": "./assets/icon3.png"

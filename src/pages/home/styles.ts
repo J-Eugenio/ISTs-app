@@ -61,8 +61,7 @@ export const MainButtonImage = styled.Image`
 `;
 
 export const QrCodeButtonImage = styled.Image`
-  border-radius: 20px;
-  height: 130px;
+  max-height: 150px;
 `;
 
 export const MainButtonText = styled.Text<ButtonType>`

@@ -79,3 +79,14 @@ export const SocialValue = styled.Text`
   margin: 0 10px;
   color: white;
 `;
+
+export const ImageContact = styled.Image`
+  display: flex;
+  height: 110px;
+  width: 120px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  align-items: flex-end;
+  justify-content: flex-end;
+`;

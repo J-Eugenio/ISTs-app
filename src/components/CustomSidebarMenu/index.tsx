@@ -19,7 +19,7 @@ import {
 
 } from './styles';
 
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo002.png';
 import { FundoPNG } from '../FundoPNG';
 
 //@ts-ignore
@@ -32,7 +32,6 @@ const CustomSidebarMenu = (props) => {
           source={Logo}
           style={styles.sideMenuProfileIcon}
         />
-        <Text style={{fontWeight: 'bold', fontSize: 22, color: 'white'}}>IST's</Text>
       </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
@@ -58,11 +57,11 @@ const CustomSidebarMenu = (props) => {
 
 const styles = StyleSheet.create({
   sideMenuProfileIcon: {
+
     resizeMode: 'contain',
-    width: 60,
+    width: 120,
     height: 60,
-    alignSelf: 'flex-start',
-    paddingHorizontal: 50,
+    marginLeft: `25%`,
   },
   iconStyle: {
     width: 15,

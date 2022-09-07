@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { Animated } from 'react-native';
 
 export const Container = styled.View`
   display: flex;
@@ -74,7 +75,9 @@ export const ConceptNameContainer = styled.View`
   border-radius: 10px;
 `;
 
-export const ContentImage = styled.Image`
+export const ContentImage = styled(Animated.Image).attrs({
+  resizeMode:"contain"
+})`
   display: flex;
   max-width: 190px;
   height: 190px;

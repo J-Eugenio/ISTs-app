@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { Linking } from 'react-native';
+import { Linking, Image } from 'react-native';
 
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 
@@ -16,16 +16,14 @@ import {
   Author,
   Social,
   SocialValue,
+  ImageContact
  } from './styles';
 import { FundoPNG } from '../../components/FundoPNG';
 
+import Ant from '../../assets/contact/01.jpeg';
+import Ally from '../../assets/contact/02.jpeg';
+
 export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
-  /**
-   * Antonio Maria Gurgel Junior
-    Instagram: @gurgelamj
-    WhatsApp: 84 9.9615-5749
-    E-mail: juniorgurgelbio@hotmail.com
-   */
   return(
     <Container>
       <Header>
@@ -44,11 +42,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
       <Main>
         <CardAuthor>
           <IconContainer>
-            <Icon 
-              name="user-md"
-              size={80}
-              color="#FFF"
-            />
+            <ImageContact source={Ant} resizeMode="contain"/>
           </IconContainer>
 
           <InfoContainer>
@@ -90,11 +84,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
 
         <CardAuthor>
           <IconContainer>
-            <Icon 
-              name="user-md"
-              size={80}
-              color="#FFF"
-            />
+            <ImageContact source={Ally} resizeMode="contain"/>
           </IconContainer>
 
           <InfoContainer>
@@ -118,7 +108,7 @@ export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) =>
                 size={20}
                 color="#FFF"
               />
-              <SocialValue>allyssandramr@hotmail.com</SocialValue>
+              <SocialValue>allyssandrarodrigues@uern.br</SocialValue>
             </Social>
 
             <Social>
