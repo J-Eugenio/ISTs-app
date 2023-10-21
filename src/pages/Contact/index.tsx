@@ -12,7 +12,7 @@ import {
 } from './styles';
 import { FundoPNG } from '../../components/FundoPNG';
 
-export const Contact:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
+export const Contact = ({ navigation }: any) => {
   return(
     <Container>
       <>

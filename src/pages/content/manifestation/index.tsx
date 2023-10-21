@@ -46,7 +46,7 @@ interface IContentProps {
   img_description: Array<String>;
 }
 
-export const Manifestation:React.FC<ContentPageProps> = ({ navigation, route }) => {
+export const Manifestation = ({ navigation, route }: any) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();

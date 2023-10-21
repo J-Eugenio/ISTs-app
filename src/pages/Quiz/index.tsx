@@ -50,7 +50,7 @@ interface QuizAnswersProps {
   answerID: number;
 }
 
-export const Quiz:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
+export const Quiz = ({ navigation }: any) => {
 
   const [quizAnswers, setQuizAnswers] = useState<QuizAnswersProps[]>([]);
   const [modal, openModal] = useState(false);

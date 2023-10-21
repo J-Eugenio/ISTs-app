@@ -42,7 +42,7 @@ interface IContentProps {
 }
 
 
-export const Transmitting:React.FC<ContentPageProps> = ({ navigation, route }) => {
+export const Transmitting = ({ navigation, route }: any) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();

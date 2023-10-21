@@ -41,7 +41,7 @@ interface IClinicalProps {
   img_description: Array<String>;
 }
 
-export const ContentPage:React.FC<ContentPageProps> = ({ navigation, route }) => {
+export const ContentPage= ({ navigation, route }: any) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [concept,  setConcept] = useState<IContentProps>();

@@ -39,7 +39,7 @@ interface IContentProps {
 }
 
 
-export const Treatment:React.FC<ContentPageProps> = ({ navigation, route }) => {
+export const Treatment = ({ navigation, route }: any) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();

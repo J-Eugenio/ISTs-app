@@ -23,7 +23,7 @@ import { FundoPNG } from '../../components/FundoPNG';
 import Ant from '../../assets/contact/01.jpeg';
 import Ally from '../../assets/contact/02.jpeg';
 
-export const Authors:React.FC<DrawerContentComponentProps> = ({ navigation }) => {
+export const Authors = ({ navigation } : any) => {
   return(
     <Container>
       <Header>

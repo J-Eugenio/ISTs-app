@@ -31,7 +31,7 @@ import {
 import { FundoPNG } from '../../components/FundoPNG';
 import QrCode from '../../assets/qr-code.jpeg';
 
-export const Home: React.FC<DrawerContentComponentProps> = ({navigation}) => {
+export const Home = ({navigation}: any) => {
   return (
     <View style={{backgroundColor:"#1E88E5", padding: 20}}>
       <Container>

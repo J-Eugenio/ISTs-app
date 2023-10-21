@@ -46,7 +46,7 @@ interface IContentProps {
   img_description: Array<String>;
 }
 
-export const Concept:React.FC<ContentPageProps> = ({ navigation, route }) => {
+export const Concept = ({ navigation, route }: any) => {
   const [title, setTitle] = useState<string>('');
   const [type,  setType] = useState<number>(0);
   const [content,  setContent] = useState<IContentProps>();
