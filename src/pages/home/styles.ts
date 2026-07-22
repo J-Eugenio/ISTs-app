@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface ButtonType {
   type?: number;
 }
 
-export const Container = styled.SafeAreaView`
+export const Container = styled(SafeAreaView)`
   display: flex;
   height: 100%;
   background: #1E88E5;

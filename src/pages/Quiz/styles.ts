@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface AnswerSelected {
   isSelected: boolean;
@@ -9,7 +10,7 @@ interface ConfirmBtnProps {
   isDisabled: boolean;
 }
 
-export const Container = styled.SafeAreaView`
+export const Container = styled(SafeAreaView)`
   display: flex;
   flex: 1;
   background: #1E88E5;
